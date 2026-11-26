@@ -1,0 +1,74 @@
+{
+  "points": [
+    "start",
+    "hall",
+    "floor2",
+    "shuttle",
+    "ramp1",
+    "ramp2",
+    "park"
+  ],
+  "start_point": "start",
+  "destination_point": "shuttle",
+  "available_minutes": 10,
+  "segments": [
+    {
+      "segment_id": "start-to-hall",
+      "from_point": "start",
+      "to_point": "hall",
+      "minutes": 2,
+      "direction": "one_way"
+    },
+    {
+      "segment_id": "fast-elevator",
+      "from_point": "hall",
+      "to_point": "floor2",
+      "minutes": 1,
+      "direction": "one_way",
+      "elevator_id": "1"
+    },
+    {
+      "segment_id": "floor2-to-shuttle",
+      "from_point": "floor2",
+      "to_point": "shuttle",
+      "minutes": 2,
+      "direction": "one_way"
+    },
+    {
+      "segment_id": "detour-1",
+      "from_point": "hall",
+      "to_point": "ramp1",
+      "minutes": 5,
+      "direction": "one_way"
+    },
+    {
+      "segment_id": "detour-2",
+      "from_point": "ramp1",
+      "to_point": "ramp2",
+      "minutes": 4,
+      "direction": "one_way"
+    },
+    {
+      "segment_id": "detour-3",
+      "from_point": "ramp2",
+      "to_point": "shuttle",
+      "minutes": 3,
+      "direction": "one_way"
+    },
+    {
+      "segment_id": "safe-1",
+      "from_point": "start",
+      "to_point": "park",
+      "minutes": 4,
+      "direction": "two_way"
+    },
+    {
+      "segment_id": "safe-2",
+      "from_point": "park",
+      "to_point": "shuttle",
+      "minutes": 5,
+      "direction": "two_way"
+    }
+  ],
+  "title_note": "Same graph with 10 minutes: the 9-minute elevator-free safe route is guaranteed."
+}

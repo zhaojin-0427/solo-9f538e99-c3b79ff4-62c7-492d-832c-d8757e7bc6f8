@@ -1,0 +1,52 @@
+{
+  "points": ["start", "e-hall", "l2", "l3", "shuttle", "ramp"],
+  "start_point": "start",
+  "destination_point": "shuttle",
+  "available_minutes": 9,
+  "segments": [
+    {
+      "segment_id": "walk-to-e1",
+      "from_point": "start",
+      "to_point": "e-hall",
+      "minutes": 1,
+      "direction": "one_way"
+    },
+    {
+      "segment_id": "e1-first-segment",
+      "from_point": "e-hall",
+      "to_point": "l2",
+      "minutes": 2,
+      "direction": "two_way",
+      "elevator_id": "1"
+    },
+    {
+      "segment_id": "e1-second-segment",
+      "from_point": "l2",
+      "to_point": "l3",
+      "minutes": 2,
+      "direction": "two_way",
+      "elevator_id": "1"
+    },
+    {
+      "segment_id": "last-walk",
+      "from_point": "l3",
+      "to_point": "shuttle",
+      "minutes": 1,
+      "direction": "one_way"
+    },
+    {
+      "segment_id": "outage-detour-1",
+      "from_point": "e-hall",
+      "to_point": "ramp",
+      "minutes": 4,
+      "direction": "one_way"
+    },
+    {
+      "segment_id": "outage-detour-2",
+      "from_point": "ramp",
+      "to_point": "shuttle",
+      "minutes": 4,
+      "direction": "one_way"
+    }
+  ]
+}

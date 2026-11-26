@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  guidance-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: wheelchair-guidance-api:1.0.0
+    container_name: wheelchair-guidance-api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=3)"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
